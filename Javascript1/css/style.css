@@ -1,1 +1,79 @@
+/* Savana Mongkhonvilay 6/22/25 */
 
+/* Updates: 
+    added stying to random key and score counter. 
+    added color variables 
+    changed background and colors to match 
+*/
+
+:root {
+    --primary-color: #c3e2ff; 
+    --white: #fff; 
+    --text-color: #292929; 
+    --Black: #000; 
+}
+
+html {
+  font-size: 10px;
+  background: url('../assets/2209_w026_n002_2510b_p1_2510.jpg') bottom center;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.ranKey {
+    background-color: var(--white);
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    width: 15em;
+    height: 10em;
+    text-align: center;
+    padding-top: 3em;
+    box-shadow: 0 0 2rem var(--primary-color);
+
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: .4rem solid var(--Black);
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: var(--white);
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem var(--Black);
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 1rem var(--primary-color);
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: var(--white);
+}
