@@ -1,0 +1,18 @@
+/* Savana Mongkhnovilay 6/26/25 */
+
+:root {
+    --primary-color: #ffadc7; 
+    --white: #fff; 
+    --text-color: #292929; 
+    --Black: #000; 
+    --background: #fdf2e7; 
+}
+
+h1 { 
+    color: var(--primary-color);
+    text-align: center;
+}
+
+body {
+    background-color: var(--background);
+}
