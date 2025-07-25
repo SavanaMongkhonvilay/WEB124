@@ -1,0 +1,135 @@
+/* Savana Mongkhonvilay */
+
+/* added color variables */
+/* added numbers  */
+/* added dynamic background depending on time of day */
+/* added styling for time */
+
+:root {
+    --white: #fff; 
+    --off-white: #EFEFEF; 
+    --black: #000000; 
+    --gold: #ffac27; 
+
+    --morning: #ffe37f; 
+    --afternoon: #ffb23d; 
+    --evening: #335fff; 
+    --night: #1100ff; 
+}
+
+html {
+      background-size: cover;
+      font-family: 'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 10px solid var(--white);
+      border-radius: 50%;
+      margin: 0 auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px var(--off-white),
+        inset 0 0 10px var(--black),
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); 
+    }
+
+    .hand {
+      width: 50%;
+      height: 4px;
+      background: var(--gold);
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+
+
+    .number {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--white);
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    }
+
+    .number1  { top: 20%;  left: 70%; }
+    .number2  { top: 30%;  left: 82%; }
+    .number3  { top: 50%;  left: 90%; }
+    .number4  { top: 70%;  left: 82%; }
+    .number5  { top: 80%;  left: 70%; }
+    .number6  { top: 88%;  left: 50%; }
+    .number7  { top: 80%;  left: 30%; }
+    .number8  { top: 70%;  left: 18%; }
+    .number9  { top: 50%;  left: 10%; }
+    .number10 { top: 30%;  left: 18%; }
+    .number11 { top: 20%;  left: 30%; }
+    .number12 { top: 12%;  left: 50%; }
+
+
+
+body.morning {
+  background: var(--morning) url(../assets/morning.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.afternoon {
+  background: var(--afternoon) url(../assets/afternoon.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.evening {
+  background: var(--evening) url(../assets/evening.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.night {
+  background: var(--night) url(../assets/night.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.digital-time {
+  font-family: monospace;
+  font-size: 2.5rem;
+  color: var(--white);
+  margin: 40px auto 0 auto;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  width: fit-content;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+}
